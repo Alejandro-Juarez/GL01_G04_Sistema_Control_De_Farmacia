@@ -41,3 +41,4 @@ nb-configuration.xml
 # Ignorar archivos compilados
 dist/
 /Sistema de gestion de atencion al cliente web/build/
+/GL01_GPP04_Sistema_Control_De_Farmacia/build/
