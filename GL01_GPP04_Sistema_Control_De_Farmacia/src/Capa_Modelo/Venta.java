@@ -4,6 +4,7 @@
  */
 package Capa_Modelo;
 
+import java.util.List;
 import java.util.Date;
 
 /**
@@ -13,6 +14,22 @@ import java.util.Date;
 public class Venta {
     private Date fecha_compra;
     private String metodo_pago;
+    private List<Detalle_Venta> carrito;
+    private int idEmpleado;
+
+    public int getIdEmpleado() {
+        return idEmpleado;
+    }
+
+    public void setIdEmpleado(int idEmpleado) {
+        this.idEmpleado = idEmpleado;
+    }
+    
+    public Venta(int idEmpleado, String metodoPago, List<Detalle_Venta> carrito) {
+        this.idEmpleado = idEmpleado;
+        this.metodo_pago = metodoPago;
+        this.carrito = carrito;
+    }
 
     public Date getFecha_compra() {
         return fecha_compra;
@@ -28,5 +45,13 @@ public class Venta {
 
     public void setMetodo_pago(String metodo_pago) {
         this.metodo_pago = metodo_pago;
+    }
+
+    public List<Detalle_Venta> getCarrito() {
+        return carrito;
+    }
+
+    public void setCarrito(List<Detalle_Venta> carrito) {
+        this.carrito = carrito;
     }
 }

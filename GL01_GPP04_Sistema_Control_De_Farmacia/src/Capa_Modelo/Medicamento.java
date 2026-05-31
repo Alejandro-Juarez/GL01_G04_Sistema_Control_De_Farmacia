@@ -16,7 +16,36 @@ public class Medicamento {
     private int unidades_por_caja;
     private String unidad_medida;
     private float concentracion;
-    private float presentacion;
+    private String presentacion;
+    private int id_Medicameto;
+    private int cantidad_actual;
+    private double ganancia_total;
+    
+    public Medicamento(){
+        
+    }
+
+    public Medicamento(String nombre_medicamento, String descripcion_medicamento, String tipo_medicamento, boolean requiere_receta, int unidades_por_caja, String unidad_medida, float concentracion, String presentacion, int id_Medicameto) {
+        this.nombre_medicamento = nombre_medicamento;
+        this.descripcion_medicamento = descripcion_medicamento;
+        this.tipo_medicamento = tipo_medicamento;
+        this.requiere_receta = requiere_receta;
+        this.unidades_por_caja = unidades_por_caja;
+        this.unidad_medida = unidad_medida;
+        this.concentracion = concentracion;
+        this.presentacion = presentacion;
+        this.id_Medicameto = id_Medicameto;
+    }
+    
+    
+
+    public int getId_Medicameto() {
+        return id_Medicameto;
+    }
+
+    public void setId_Medicameto(int id_Medicameto) {
+        this.id_Medicameto = id_Medicameto;
+    }
 
     public String getNombre_medicamento() {
         return nombre_medicamento;
@@ -74,11 +103,27 @@ public class Medicamento {
         this.concentracion = concentracion;
     }
 
-    public float getPresentacion() {
+    public String getPresentacion() {
         return presentacion;
     }
 
-    public void setPresentacion(float presentacion) {
+    public void setPresentacion(String presentacion) {
         this.presentacion = presentacion;
+    }
+
+    public int getCantidad_actual() {
+        return cantidad_actual;
+    }
+
+    public void setCantidad_actual(int cantidad_actual) {
+        this.cantidad_actual = cantidad_actual;
+    }
+
+    public double getGanancia_total() {
+        return ganancia_total;
+    }
+
+    public void setGanancia_total(double ganancia_total) {
+        this.ganancia_total = ganancia_total;
     }
 }
